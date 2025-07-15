@@ -40,28 +40,28 @@ public class CalculatorTest {
   //   b = 0;
   // }
 
-  @Test
-  public void tc001() {
-    System.out.println("TC001.SignInTest.");
-  }
+  // @Test
+  // public void tc001() {
+  //   System.out.println("TC001.SignInTest.");
+  // }
 
-  @Test
-  public void tc003() {
-    System.out.println("TC003.SignInTest.");
-  }
+  // @Test
+  // public void tc003() {
+  //   System.out.println("TC003.SignInTest.");
+  // }
 
-  @Test
-  public void tc002() {
-    System.out.println("TC002.SignInTest.");
-  }
+  // @Test
+  // public void tc002() {
+  //   System.out.println("TC002.SignInTest.");
+  // }
 
-  @Test
-  public void SignInTest() {
-    System.out.println("mencoba .SignInTest.");
-  }
-  @Test(dependsOnMethods = {"SignInTest"})
-  public void dashboardTest() {
-    System.out.println("mencoba2 .dASHBOARD.");
-  }
+  // @Test
+  // public void SignInTest() {
+  //   System.out.println("mencoba .SignInTest.");
+  // }
+  // @Test(dependsOnMethods = {"SignInTest"})
+  // public void dashboardTest() {
+  //   System.out.println("mencoba2 .dASHBOARD.");
+  // }
 
 }
