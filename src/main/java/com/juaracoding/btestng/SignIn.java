@@ -20,7 +20,7 @@ public class SignIn {
     this.password = password;
   }
 
-  public boolean onSignIn() {
+  public boolean clickButtonSignIn() {
     String usernameDB = "johansebastian";
     String passwordDB = "123qwe";
 

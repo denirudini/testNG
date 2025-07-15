@@ -4,7 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+
 
 public class SignInTest {
   // private String username;
@@ -42,29 +45,56 @@ public class SignInTest {
 
   
 
-  @Test(priority = 2)
-  public void dashboardTest() {
-    System.out.println("Method SignInTest.dashboardTest dijalankan");
+  // @Test(priority = 2)
+  // public void dashboardTest() {
+  //   System.out.println("Method SignInTest.dashboardTest dijalankan");
+  // }
+
+  // @Test(priority = 1)
+  // public void signinTest() {
+  //   System.out.println("Method SignInTest.signinTest dijalankan");
+  // }
+
+  // @Test(priority = 3)
+  // public void profileTest() {
+  //   System.out.println("Method SignInTest.profileTest dijalankan");
+  // }
+
+  // @Test(priority = 4, enabled = false)
+  // public void mencobaEnable() {
+  //   System.out.println("Method SignInTest.mencobaEnable dijalankan");
+  // }
+
+  // @Test(priority = 5)
+  // public void mencobaTrue() {
+  //   System.out.println("Method SignInTest.mencobaTrue dijalankan");
+  // }
+
+   private SignIn signIn;
+
+  @BeforeClass
+  public void setup() {
+    signIn = new SignIn();
   }
 
   @Test(priority = 1)
-  public void signinTest() {
-    System.out.println("Method SignInTest.signinTest dijalankan");
+  @Parameters("username")
+  public void fillUsername(String username) {
+    signIn.setUsername(username);
+    Assert.assertEquals(username, signIn.getUsername());
+  }
+
+  @Test(priority = 2)
+  @Parameters("password")
+  public void fillPassword(String password) {
+    signIn.setPassword(password);
+    Assert.assertEquals(password, signIn.getPassword());
   }
 
   @Test(priority = 3)
-  public void profileTest() {
-    System.out.println("Method SignInTest.profileTest dijalankan");
-  }
-
-  @Test(priority = 4, enabled = false)
-  public void mencobaEnable() {
-    System.out.println("Method SignInTest.mencobaEnable dijalankan");
-  }
-
-  @Test(priority = 5)
-  public void mencobaTrue() {
-    System.out.println("Method SignInTest.mencobaTrue dijalankan");
+  public void clickButtonSignIn() {
+    boolean actual = signIn.clickButtonSignIn();
+    Assert.assertTrue(actual);
   }
 
 }
