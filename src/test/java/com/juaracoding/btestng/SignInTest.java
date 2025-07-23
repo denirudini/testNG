@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import com.juaracoding.btestng.SignIn;
 
 
 
@@ -82,13 +83,16 @@ public class SignInTest {
   public void fillUsername(String username) {
     signIn.setUsername(username);
     Assert.assertEquals(username, signIn.getUsername());
+    System.out.println("berhasil memasukan .username");
   }
 
-  @Test(priority = 2)
+  @Test(priority = 2, timeOut = 500)
   @Parameters("password")
-  public void fillPassword(String password) {
+  public void fillPassword(String password) throws Exception{
     signIn.setPassword(password);
     Assert.assertEquals(password, signIn.getPassword());
+    System.out.println("berhasil memasukan .password");
+    Thread.sleep(400);
   }
 
   @Test(priority = 3)
