@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<!-- <suite name="Sequential_Test_Suite" verbose="1" parallel="false">
+<!-- <suite name="Sequential-Test">
 
     <test name="Sequential_Tests">
         <classes>
-            <class name="com.juaracoding.btestng.TestClassOne"/>
-            <class name="com.juaracoding.btestng.TestClassTwo"/>
+            <class name="com.juaracoding.btestng.TestSatu"/>
+            <class name="com.juaracoding.btestng.TestDua"/>
         </classes>
     </test>
 
 </suite> -->
 
-<suite name="Parallel_Test_Suite" verbose="1" parallel="classes" thread-count="2">
+<suite name="Parallel-Test" parallel="classes" >
 
-    <test name="Parallel_Tests">
+    <test name="Parallel-Tests">
         <classes>
-            <class name="com.juaracoding.btestng.TestClassOne"/>
-            <class name="com.juaracoding.btestng.TestClassTwo"/>
+            <class name="com.juaracoding.btestng.TestSatu"/>
+            <class name="com.juaracoding.btestng.TestDua"/>
         </classes>
     </test>
 
