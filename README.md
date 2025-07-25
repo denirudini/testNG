@@ -18,8 +18,8 @@ Contoh konfigurasi (di-comment pada `testng.xml`):
 
 ```xml
 
-<suite name="Sequential_Test_Suite">
-    <test name="Sequential_Tests">
+<suite name="Sequential-Test">
+    <test name="Sequential-Tests">
         <classes>
             <class name="com.juaracoding.btestng.TestSatu"/>
             <class name="com.juaracoding.btestng.TestDua"/>
